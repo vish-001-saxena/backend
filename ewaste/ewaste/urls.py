@@ -1,34 +1,14 @@
-"""
-URL configuration for ewaste project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-# from django.urls import path
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-# ]
 from django.urls import path, include
 from core import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', include('core.urls')),  # Replace with your app's name
-    path('', views.home, name='home'),  # already there
+    path('', views.home, name='home'),  
     path('api/pickup/', views.create_pickup),  # already there
     path('registration.html', views.registration_page, name='registration'),
-    path('pickup.html', views.pickup, name='pickup'),
+    path('pickup.html', views.Pickup_order, name='pickup'),
     path('tracking.html', views.tracking, name='tracking'),
     path('category.html', views.category, name='category'),
     path('blog.html', views.blog , name='blog'),

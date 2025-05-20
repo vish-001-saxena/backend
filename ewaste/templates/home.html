@@ -1,8 +1,144 @@
-{% extends 'base.html' %}
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - E-Waste Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
 
-{% block title %}Home - E-Waste{% endblock %}
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-{% block content %}
-    <h2>Welcome to the E-Waste Awareness Website</h2>
-    <p>Reduce. Reuse. Recycle. Protect the planet.</p>
-{% endblock %}
+        nav {
+            background-color: #388e3c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #43a047;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #2e7d32;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .feature-box h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Waste Awareness & Management</h1>
+        <p>Contribute to a cleaner, greener future</p>
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'pickup' %}">Pickup</a>
+        <a href="#">Awareness</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h2>Welcome to Our E-Waste Portal</h2>
+        <p>Help reduce electronic waste by registering and scheduling your e-waste pickup.</p>
+        <a href="{% url 'register' %}" class="btn">Register Now</a>
+
+        <!-- Features Section -->
+        <div class="features">
+            <div class="feature-box">
+                <h3>Easy Registration</h3>
+                <p>Sign up with just your name, email, and phone number to get started.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Pickup Scheduling</h3>
+                <p>Schedule doorstep pickups for your old or unused electronics.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Awareness Programs</h3>
+                <p>Learn how to dispose of e-waste safely and the impact it has on the environment.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Track Your Waste</h3>
+                <p>Get updates and records of your e-waste contributions and impact.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Community Impact</h3>
+                <p>Be part of a growing community focused on responsible recycling practices.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 E-Waste Initiative. All rights reserved.
+    </footer>
+</body>
+</html>

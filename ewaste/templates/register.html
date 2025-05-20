@@ -1,8 +1,9 @@
+<!-- templates/register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pickup - E-Waste Management</title>
+    <title>Register - E-Waste Management</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,10 +62,7 @@
 
         input[type="text"],
         input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        input[type="time"],
-        textarea {
+        input[type="tel"] {
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
@@ -104,7 +102,7 @@
 <body>
     <header>
         <h1>E-Waste Awareness & Management</h1>
-        <p>Request a Pickup for Your E-Waste</p>
+        <p>Join us to create a cleaner planet</p>
     </header>
 
     <nav>
@@ -116,11 +114,11 @@
     </nav>
 
     <div class="form-container">
-        <h2>Pickup Request Form</h2>
+        <h2>Register for E-Waste Pickup</h2>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Submit Request</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 

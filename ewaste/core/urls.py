@@ -1,8 +1,7 @@
 from django.urls import path
-from . import views
-from .views import create_pickup
+from .views import create_pickup ,register_user, registration_success
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('api/pickup/', create_pickup),
+    path('register', register_user, name='register'),
+    path('success', registration_success, name='success'),
 ]
